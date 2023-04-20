@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-bt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    * {
+      font-family: Poppins;
+    }
+  </style>
+  <title>HMTL E JS</title>
+</head>
+<body>
+
+
+<script>
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  function calcularIMC(peso, altura) {
+    return peso / (altura * altura);
+  }
+
+  let peso = prompt("Informe seu peso");
+  let altura = prompt("Informe sua altura");
+
+  let imc = calcularIMC(peso, altura);
+
+  mostra("O IMC é " + imc)
+
+  if (imc < 18.5){
+    mostra("Você esta abaixo do recomendado")
+  }
+  if (imc > 35){
+    mostra("Você esta acima do recomendado")
+  }
+  if (imc >= 18.5 && imc <= 35){
+    mostra("Seu IMC esta excelente!")
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<script>
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  let numeroRandom = Math.round(Math.random() * 10);
+  let chute = parseInt(prompt("Digite seu chute"));
+
+  if (chute === numeroRandom) {
+    mostra("Voce acertou!");
+  } else {
+    mostra("Você errou tente novamente, o numero correto é: " + numeroRandom);
+  }
+
+</script>

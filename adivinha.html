@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<input>
+
+<button>Compare</button>
+
+<script>
+  let segredo = Math.round(Math.random() * 4);
+  console.log(segredo);
+  let input = document.querySelector("input");
+
+  function verifica() {
+    if (parseInt(input.value) === segredo) {
+      alert("Acertou!")
+    } else {
+      alert("Errou!");
+    }
+    input.value = "";
+    input.focus();
+  }
+
+  let button = document.querySelector("button");
+  button.onclick = verifica;
+
+</script>
